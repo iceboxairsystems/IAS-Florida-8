@@ -1,0 +1,9 @@
+# robots.txt — IAS Florida
+User-agent: *
+Allow: /
+
+# Páginas sin valor para buscadores
+Disallow: /thank-you.html
+Disallow: /404.html
+
+Sitemap: https://iasflorida.com/sitemap.xml

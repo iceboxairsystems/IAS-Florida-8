@@ -1,0 +1,63 @@
+════════════════════════════════════════════════════════════
+  IAS FLORIDA — SITIO WEB
+  Repositorio: github.com/iceboxairsystems/iasflorida
+  Dominio: iasflorida.com
+════════════════════════════════════════════════════════════
+
+CÓMO SUBIRLO
+────────────────────────────────────────────────────────────
+Sube los 20 archivos a la RAÍZ del repo, no dentro de una
+carpeta. Los enlaces entre páginas asumen que todos están
+al mismo nivel; si los metes en subcarpetas, se rompen.
+
+  1. github.com/iceboxairsystems/iasflorida
+  2. Add file -> Upload files
+  3. Arrastra los 20 archivos juntos
+  4. Commit changes
+
+QUÉ ES CADA ARCHIVO
+────────────────────────────────────────────────────────────
+  index.html                     Página principal (foto incluida)
+  ac-repair.html                 Servicio: reparación
+  ac-installation.html           Servicio: instalación
+  ac-maintenance.html            Servicio: mantenimiento
+  commercial-refrigeration.html  Servicio: refrigeración
+  emergency-hvac.html            Servicio: emergencias 24/7
+  privacy.html                   Política de privacidad
+  terms.html                     Términos del servicio
+  thank-you.html                 Después de enviar formulario
+  404.html                       Página no encontrada
+  robots.txt                     Instrucciones para buscadores
+  sitemap.xml                    Mapa del sitio para Google
+  llms.txt                       Contexto para asistentes de IA
+  site.webmanifest               Configuración de app móvil
+  favicon.ico / .svg             Icono del navegador
+  apple-touch-icon.png           Icono para iPhone
+  icon-192.png / icon-512.png    Iconos de app
+  og-image.jpg                   Imagen al compartir en redes
+
+PENDIENTES ANTES DE PUBLICAR
+────────────────────────────────────────────────────────────
+  [ ] Reemplazar cifras marcadas con warning en index.html:
+      500+ clientes, 15+ años, <60 min, 4.9 estrellas,
+      127 reseñas -> deben ser datos REALES
+  [ ] Escribir testimonios reales (están vacíos)
+  [ ] Escribir casos de éxito reales (están vacíos)
+  [ ] Dirección real y licencia CMC (buscar REEMPLAZAR)
+  [ ] Enlaces sociales (buscar PERFIL en el pie de página)
+  [ ] Google Analytics: reemplazar G-XXXXXXXXXX
+  [ ] Google Search Console: reemplazar PEGA-TU-CODIGO-AQUI
+  [ ] Revisión legal de privacy.html y terms.html por un
+      abogado de Florida (sobre todo secciones 10 y 11 de
+      los términos: tope de responsabilidad e indemnización)
+  [ ] Probar los dos formularios y confirmar los correos
+      de Formspree (si no, los clientes no llegan)
+  [ ] Verificar que el evento de Calendly jobs-iasflorida
+      sea para servicio, no para contratación
+
+DATOS DE CONTACTO CONFIGURADOS
+────────────────────────────────────────────────────────────
+  Teléfono:  (786) 372-7744
+  Correo:    jobs@iasflorida.com
+  Calendly:  calendly.com/jobs-iasflorida/30min
+  Formspree: hero xvkpgbey / contacto xrpzbanw
