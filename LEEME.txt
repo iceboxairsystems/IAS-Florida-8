@@ -39,7 +39,7 @@ QUÉ ES CADA ARCHIVO
 PENDIENTES ANTES DE PUBLICAR
 ────────────────────────────────────────────────────────────
   [ ] Reemplazar cifras marcadas con warning en index.html:
-      500+ clientes, 15+ años, <60 min, 4.9 estrellas,
+      500+ clientes, 15+ años, Mismo día, 4.9 estrellas,
       127 reseñas -> deben ser datos REALES
   [ ] Escribir testimonios reales (están vacíos)
   [ ] Escribir casos de éxito reales (están vacíos)
