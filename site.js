@@ -59,7 +59,7 @@ const SITE_ES = {
   'footer.area':'Miami, Coral Gables, Brickell, Doral y todo Miami-Dade',
   'footer.parent':'Una compañía de Icebox Air Systems',
   'footer.privacy':'Política de privacidad','footer.terms':'Términos del servicio',
-  'cta.title':'¿Necesitas aire hoy?',
+  'cta.title':'¿Sudando?<br><span class="italic">Arreglemos eso.</span>',
   'cta.p':'Agenda en línea o llama a nuestra línea de despacho. Servicio el mismo día en todo Miami-Dade.',
   'cookie.body':'<b>Usamos cookies.</b> Un poco de almacenamiento para recordar tu idioma y analítica opcional para ver qué páginas ayudan. No compartimos ni vendemos nada. <a href="privacy.html">Política de privacidad</a>',
   'cookie.accept':'Aceptar todo','cookie.decline':'Solo lo esencial',
@@ -77,7 +77,11 @@ const SITE_ES = {
   'f.ok.title':'Solicitud recibida','f.ok.p':'Un despachador te contactará en breve. Ten el teléfono cerca.',
   'f.plans':'Planes solicitados',
   'mb.call':'Llamar','mb.book':'Agendar',
-  'hcp.cal.alt':'¿No carga? Abre la agenda en otra pestaña.'
+  'hcp.cal.alt':'¿No carga? Abre la agenda en otra pestaña.',
+  'top.1':'Emergencias 24/7','top.2':'Cotización gratis','top.3':'Técnicos licenciados',
+  'nav.calllabel':'Llama ya · 24/7','more':'Ver detalles',
+  'seg.res':'Residencial','seg.com':'Comercial',
+  'cta.eyebrow':'¿Listo?'
 };
 
 let currentLang = almacen.leer('ias_lang') || 'en';
@@ -137,6 +141,41 @@ applyLanguage(currentLang);
     drop.addEventListener('keydown', e => { if (e.key === 'Escape') { set(false); btn.focus(); } });
     drop.addEventListener('focusout', e => { if (!drop.contains(e.relatedTarget)) set(false); });
   });
+})();
+
+/* ═══════════════ VIDA: NIEVE Y APARICIÓN AL HACER SCROLL ═══════════════ */
+(function(){
+  const quieto = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Nieve decorativa (se apaga sola si el visitante pidió menos movimiento)
+  const nieve = document.querySelector('.snow');
+  if (nieve && !quieto) {
+    const simbolos = ['❄','❅','❆'];
+    const cuantos = window.innerWidth < 700 ? 8 : 14;
+    for (let i = 0; i < cuantos; i++) {
+      const f = document.createElement('div');
+      f.className = 'snowflake';
+      f.textContent = simbolos[i % 3];
+      f.style.left = Math.random() * 100 + '%';
+      f.style.fontSize = (10 + Math.random() * 18) + 'px';
+      f.style.animationDuration = (12 + Math.random() * 14) + 's';
+      f.style.animationDelay = -Math.random() * 20 + 's';
+      f.style.opacity = 0.3 + Math.random() * 0.4;
+      nieve.appendChild(f);
+    }
+  }
+  // Aparición escalonada
+  const items = [...document.querySelectorAll('.reveal')];
+  items.forEach(el => {
+    if (el.style.transitionDelay) return;
+    const hermanos = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
+    const i = hermanos.indexOf(el);
+    if (i > 0) el.style.transitionDelay = Math.min(i, 4) * 0.09 + 's';
+  });
+  if (quieto || !('IntersectionObserver' in window)) { items.forEach(el => el.classList.add('visible')); return; }
+  const obs = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+  }), { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+  items.forEach(el => obs.observe(el));
 })();
 
 /* ═══════════════ PREGUNTAS FRECUENTES ═══════════════ */
@@ -332,11 +371,14 @@ function cerrarGracias(){
     const btn = document.querySelector('[data-plan="' + id + '"]');
     if (!btn) return;
     const card = btn.closest('.plan');
+    const seg = card ? (card.querySelector('.seg')?.textContent.trim() || '') : '';
+    const sub = card ? (card.querySelector('.plan-sub')?.textContent.trim() || '') : '';
     carrito.set(id, {
       nombre: btn.dataset.planName,
       precio: parseFloat(btn.dataset.planPrice) || 0,
       unidad: btn.dataset.planUnit,
-      tagline: card ? (card.querySelector('.plan-sub')?.textContent || '') : ''
+      seg: seg,
+      tagline: seg ? seg + ' · ' + sub : sub
     });
   }
   document.querySelectorAll('[data-plan]').forEach(btn => btn.addEventListener('click', () => {
@@ -403,8 +445,9 @@ function cerrarGracias(){
 
     // Resumen que viaja con el formulario
     const resumen = [...carrito.entries()].map(([id, it]) => {
-      if (comboOn && id === DESCUENTO.aplicaA) return it.nombre + ' (' + money(it.precio * (1 - DESCUENTO.porcentaje)) + ', 10% combo discount, was $' + it.precio + ')';
-      return it.nombre + ' (' + precioTexto(it) + ')';
+      const tipo = it.seg ? ' [' + it.seg + ']' : '';
+      if (comboOn && id === DESCUENTO.aplicaA) return it.nombre + tipo + ' (' + money(it.precio * (1 - DESCUENTO.porcentaje)) + ', 10% combo discount, was $' + it.precio + ')';
+      return it.nombre + tipo + ' (' + precioTexto(it) + ')';
     }).join(', ');
     const input = document.getElementById('planesInput');
     if (input) input.value = resumen;

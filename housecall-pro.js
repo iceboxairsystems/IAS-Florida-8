@@ -43,7 +43,7 @@ window.IAS_HCP = {
   `,
 
   /* Used only while box 1 is empty. */
-  fallbackCalendly: 'https://calendly.com/jobs-iasflorida/30min?hide_gdpr_banner=1&background_color=ffffff&text_color=0b1b2c&primary_color=fb923c'
+  fallbackCalendly: 'https://calendly.com/jobs-iasflorida/30min?hide_gdpr_banner=1&background_color=0a1929&text_color=ffffff&primary_color=fb923c'
 };
 
 
