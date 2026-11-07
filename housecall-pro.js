@@ -35,7 +35,7 @@ window.IAS_HCP = {
 
   `,
 
-  /* 2) LEAD FORM — optional. Replaces the free-estimate forms on the
+  /* 2) LEAD FORM — optional. Replaces the estimate request forms on the
         home page and the Contact page with your Housecall Pro lead form,
         so those requests land in Housecall Pro instead of email. */
   leadForm: `
@@ -105,7 +105,7 @@ window.IAS_HCP = {
     document.querySelectorAll('[data-hcp-lead-slot]').forEach(function (slot) {
       var destino = slot.querySelector('[data-hcp-lead-target]') || slot;
       if (lead.link && !lead.html) {
-        destino.innerHTML = '<div class="book-ready"><h2>' + (esES() ? 'Pide tu cotización gratis' : 'Request a free estimate') +
+        destino.innerHTML = '<div class="book-ready"><h2>' + (esES() ? 'Pide tu cotización' : 'Request an estimate') +
           '</h2><a class="btn btn-primary" target="_blank" rel="noopener" href="' + lead.link + '">' +
           (esES() ? 'Abrir el formulario' : 'Open the request form') + '</a></div>';
       } else {

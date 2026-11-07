@@ -67,7 +67,7 @@ const SITE_ES = {
   'modal.p':'Recibimos tu solicitud. Un despachador te llamará en breve; en horario laboral, normalmente en menos de 15 minutos.',
   'modal.btn':'Perfecto, gracias','modal.tel':'¿Es urgente? Llama al <a href="tel:+17863727744">(786) 372-7744</a>, 24/7.',
   /* Formularios */
-  'f.badge':'Gratis y sin compromiso',
+  'f.badge':'Gratis al contratarnos',
   'f.name':'Nombre','f.phone':'Teléfono','f.email':'Correo','f.zip':'Código postal','f.opt':'(opcional)',
   'f.urgency':'¿Para cuándo?','f.urg.now':'Emergencia (ahora)','f.urg.today':'Hoy','f.urg.week':'Esta semana','f.urg.plan':'Solo estoy planeando',
   'f.service':'¿Qué necesitas?','f.svc.pick':'Elige un servicio…','f.svc.repair':'Reparación de AC','f.svc.install':'Instalación nueva',
@@ -78,7 +78,7 @@ const SITE_ES = {
   'f.plans':'Planes solicitados',
   'mb.call':'Llamar','mb.book':'Agendar',
   'hcp.cal.alt':'¿No carga? Abre la agenda en otra pestaña.',
-  'top.1':'Emergencias 24/7','top.2':'Cotización gratis','top.3':'Técnicos licenciados',
+  'top.1':'Emergencias 24/7','top.2':'Cotización gratis al contratarnos','top.3':'Técnicos licenciados',
   'nav.calllabel':'Llama ya · 24/7','more':'Ver detalles',
   'seg.res':'Residencial','seg.com':'Comercial',
   'cta.eyebrow':'¿Listo?'

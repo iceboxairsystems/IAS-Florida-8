@@ -122,7 +122,7 @@ p{max-width:68ch}
 .logo-name b{font-family:var(--serif);font-size:25px;font-weight:600;letter-spacing:-.5px}
 .logo-name small{font-family:var(--mono);font-size:10.5px;letter-spacing:3.5px;color:rgba(125,211,252,.78);margin-top:4px}
 .main-nav{display:flex;align-items:center;gap:2px;margin-right:auto}
-.main-nav>a,.nav-drop>button{position:relative;display:flex;align-items:center;gap:6px;padding:8px 12px;font-size:14.5px;font-weight:500;color:rgba(255,255,255,.66);text-decoration:none;transition:color .2s}
+.main-nav>a,.nav-drop>button{position:relative;display:flex;align-items:center;gap:6px;padding:8px 12px;white-space:nowrap;font-size:14.5px;font-weight:500;color:rgba(255,255,255,.66);text-decoration:none;transition:color .2s}
 .main-nav>a::after{content:'';position:absolute;left:12px;right:12px;bottom:2px;height:1px;background:var(--ice);transform:scaleX(0);transform-origin:left;transition:transform .25s}
 .main-nav>a:hover,.nav-drop>button:hover,.main-nav>a[aria-current="page"]{color:#fff}
 .main-nav>a:hover::after,.main-nav>a[aria-current="page"]::after{transform:scaleX(1)}
@@ -156,7 +156,8 @@ p{max-width:68ch}
 .mobile-menu .btn-row{margin-top:20px}
 .mobile-menu .btn{flex:1;display:inline-flex;padding:0 16px;border-bottom:0;font-size:15px;font-weight:700;color:#fff}
 .mobile-menu .lang{margin-top:18px;width:max-content}
-@media (max-width:1180px){.main-nav{display:none}.nav-toggle{display:grid}.header-inner{justify-content:space-between}}
+@media (max-width:1320px){.header-phone small{display:none}.header-inner{gap:18px}.main-nav>a,.nav-drop>button{padding:8px 9px}}
+@media (max-width:1260px){.main-nav{display:none}.nav-toggle{display:grid}.header-inner{justify-content:space-between}}
 @media (max-width:760px){.header-actions .lang,.header-actions .header-book{display:none}:root{--header-h:72px}}
 @media (max-width:560px){.header-phone{display:none}.logo-mark{width:44px;height:44px}}
 

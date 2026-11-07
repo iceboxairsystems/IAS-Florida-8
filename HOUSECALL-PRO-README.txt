@@ -36,7 +36,7 @@ WHAT HAPPENS AUTOMATICALLY
   If only a link is provided, the buttons open that link in a new tab.
 - book.html shows the embedded booking widget if the code includes one;
   otherwise it shows a button that opens the Housecall Pro pop-up.
-- Lead Form code replaces the free-estimate forms on index.html (top of
+- Lead Form code replaces the estimate request forms on index.html (top of
   the home page) and contact.html. plans.html keeps its own form because
   it sends the plans the customer selected.
 - While nothing is pasted, booking falls back to Calendly.
