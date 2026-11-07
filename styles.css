@@ -288,7 +288,7 @@ p{max-width:68ch}
 .plan-btn{width:100%}
 .plans-foot{margin:34px auto 0;text-align:center;font-size:15px;color:var(--muted)}
 .plans-foot a{margin-left:8px}
-.plans-more{margin-top:18px;text-align:center}
+.plans-more{margin:18px auto 0;text-align:center}
 @media (max-width:1000px){.plan-groups{grid-template-columns:1fr;gap:44px}}
 @media (max-width:640px){.plan-group--res .group-cards{grid-template-columns:1fr}.plan{padding:36px 24px 26px}}
 
@@ -377,7 +377,7 @@ p{max-width:68ch}
 .faq-group{max-width:860px;margin:0 auto}
 .faq-group+.faq-group{margin-top:56px}
 .faq-group h2{font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:3px;text-transform:uppercase;color:rgba(251,146,60,.9);margin-bottom:8px}
-.faq-more{text-align:center;margin-top:48px;color:var(--muted)}
+.faq-more{text-align:center;margin:48px auto 0;color:var(--muted)}
 .faq-more a{color:var(--ice);font-weight:700;text-decoration:none}
 
 /* ─────────────── Formularios ─────────────── */
