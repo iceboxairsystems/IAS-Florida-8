@@ -47,14 +47,14 @@ const almacen = {
 const SITE_ES = {
   'a11y.skip':'Saltar al contenido',
   'nav.services':'Servicios','nav.plans':'Planes y financiamiento','nav.about':'Nosotros',
-  'nav.faq':'Preguntas','nav.contact':'Contacto','nav.call':'Despacho 24/7','nav.home':'Inicio',
+  'nav.faq':'Preguntas','nav.contact':'Contacto','nav.call':'Línea abierta 24/7','nav.home':'Inicio',
   'btn.book':'Agendar en línea','btn.call':'Llamar al (786) 372-7744','btn.callshort':'Llamar',
   'svc.repair.t':'Reparación de AC','svc.repair.s':'Diagnóstico y reparación el mismo día',
   'svc.install.t':'Instalación nueva','svc.install.s':'Reemplazos e instalaciones, bien dimensionados',
   'svc.maint.t':'Mantenimiento','svc.maint.s':'Afinaciones dos veces al año',
-  'svc.emerg.t':'Emergencias 24/7','svc.emerg.s':'Contesta una persona, día y noche',
+  'svc.emerg.t':'Servicio de emergencia','svc.emerg.s':'Despacho diario hasta las 10 PM',
   'crumb.home':'Inicio','crumb.services':'Servicios',
-  'footer.blurb':'Contratista mecánico con licencia que atiende Miami-Dade y Broward con HVAC residencial y comercial y respuesta de emergencia 24/7.',
+  'footer.blurb':'Contratista mecánico con licencia que atiende Miami-Dade y Broward con HVAC residencial y comercial y despacho de emergencias todos los días hasta las 10 PM.',
   'footer.services':'Servicios','footer.company':'Empresa','footer.contact':'Contacto',
   'footer.area':'Todo Miami-Dade y Broward',
   'footer.parent':'Una compañía de Icebox Air Systems',
@@ -65,7 +65,7 @@ const SITE_ES = {
   'cookie.accept':'Aceptar todo','cookie.decline':'Solo lo esencial',
   'modal.title':'Gracias por confiar en IAS Florida',
   'modal.p':'Recibimos tu solicitud. Un despachador te llamará en breve; en horario laboral, normalmente en menos de 15 minutos.',
-  'modal.btn':'Perfecto, gracias','modal.tel':'¿Es urgente? Llama al <a href="tel:+17863727744">(786) 372-7744</a>, 24/7.',
+  'modal.btn':'Perfecto, gracias','modal.tel':'¿Es urgente? Llama al <a href="tel:+17863727744">(786) 372-7744</a>. Despachamos emergencias todos los días hasta las 10 PM.',
   /* Formularios */
   'f.badge':'Gratis al contratarnos',
   'f.name':'Nombre','f.phone':'Teléfono','f.email':'Correo','f.zip':'Código postal','f.opt':'(opcional)',
@@ -78,8 +78,8 @@ const SITE_ES = {
   'f.plans':'Planes solicitados',
   'mb.call':'Llamar','mb.book':'Agendar',
   'hcp.cal.alt':'¿No carga? Abre la agenda en otra pestaña.',
-  'top.1':'Emergencias 24/7','top.2':'Cotización gratis al contratarnos','top.3':'Técnicos licenciados',
-  'nav.calllabel':'Llama ya · 24/7','more':'Ver detalles',
+  'top.1':'Emergencias todos los días hasta las 10 PM','top.2':'Cotización gratis al contratarnos','top.3':'Técnicos licenciados',
+  'nav.calllabel':'Línea abierta 24/7','more':'Ver detalles',
   'seg.res':'Residencial','seg.com':'Comercial',
   'cta.eyebrow':'¿Listo?'
 };

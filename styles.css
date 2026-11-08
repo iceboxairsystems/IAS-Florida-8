@@ -343,6 +343,10 @@ p{max-width:68ch}
 .info .tile{margin-bottom:20px}
 .info h2,.info h3{font-size:24px;font-weight:500;letter-spacing:-.01em;margin-bottom:10px}
 .info p{font-size:15px;color:rgba(255,255,255,.58)}
+.svc-note{display:flex;align-items:center;gap:16px;margin-top:20px;padding:18px 22px;border-radius:20px;background:rgba(244,63,94,.08);border:1px solid rgba(244,63,94,.28)}
+.svc-note .tile{width:40px;height:40px;border-radius:12px}
+.svc-note p{margin:0;max-width:none;font-size:15px;color:rgba(255,255,255,.72)}
+.svc-note b{color:#fff;font-weight:700}
 @media (max-width:760px){.info-grid{grid-template-columns:1fr;gap:14px}}
 
 .link-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}

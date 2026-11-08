@@ -59,7 +59,7 @@ QUÉ ES CADA ARCHIVO
   ac-repair.html        Servicio: reparación
   ac-installation.html  Servicio: instalación
   ac-maintenance.html   Servicio: mantenimiento
-  emergency-hvac.html   Servicio: emergencias 24/7
+  emergency-hvac.html   Servicio: emergencias (despacho todos los días hasta las 10 PM)
   privacy.html          Política de privacidad
   terms.html            Términos del servicio
   thank-you.html        Página de agradecimiento
