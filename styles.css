@@ -413,6 +413,9 @@ p{max-width:68ch}
 .chip::before{content:'';width:8px;height:8px;border-radius:50%;border:1.5px solid rgba(255,255,255,.4);transition:all .2s}
 .chip input{position:absolute;opacity:0;pointer-events:none}
 .chip.selected{border-color:rgba(125,211,252,.55);background:rgba(125,211,252,.12);color:var(--ice)}
+/* chips live inside .field: undo the small mono label style so they render as pills */
+.field label.chip{display:inline-flex;font-family:inherit;font-size:13.5px;letter-spacing:0;text-transform:none;color:rgba(255,255,255,.82);margin-bottom:0}
+.field label.chip.selected{color:var(--ice)}
 .chip.selected::before{background:var(--ice);border-color:var(--ice);box-shadow:0 0 10px var(--ice)}
 .chip:focus-within{box-shadow:0 0 0 3px rgba(125,211,252,.3)}
 .form-alert{display:none;gap:10px;align-items:flex-start;padding:13px 15px;border-radius:14px;background:rgba(244,63,94,.1);border:1px solid rgba(244,63,94,.35);color:#fecaca;font-size:14px;margin-bottom:18px}

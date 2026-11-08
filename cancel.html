@@ -130,7 +130,9 @@
           <option value="Glacier" data-i18n="cx.f.p2">Glacier (commercial)</option>
         </select>
       </div>
-      <div class="field"><label for="cancelForm-notes"><span data-i18n="cx.f.notes">Anything we should know?</span> <span class="opt" data-i18n="f.opt">(optional)</span></label><textarea id="cancelForm-notes" class="textarea" name="notes"></textarea></div>
+      <fieldset class="field" style="border:0"><legend class="label" data-i18n="cx.why">Why are you leaving? (optional)</legend><div class="chips"><label class="chip"><input type="checkbox" name="reason" value="Moving or selling the home"><span data-i18n="cx.r1">Moving or selling the home</span></label><label class="chip"><input type="checkbox" name="reason" value="Price"><span data-i18n="cx.r2">Price</span></label><label class="chip"><input type="checkbox" name="reason" value="Not using the benefits"><span data-i18n="cx.r3">Not using the benefits</span></label><label class="chip"><input type="checkbox" name="reason" value="New system or under warranty"><span data-i18n="cx.r4">New system or under warranty</span></label><label class="chip"><input type="checkbox" name="reason" value="Not happy with our service"><span data-i18n="cx.r5">Not happy with our service</span></label><label class="chip"><input type="checkbox" name="reason" value="Switching to another company"><span data-i18n="cx.r6">Switching to another company</span></label><label class="chip"><input type="checkbox" name="reason" value="Other reason"><span data-i18n="cx.r7">Other reason</span></label></div></fieldset>
+      <div class="field"><label for="cancelForm-feedback"><span data-i18n="cx.better">What could we have done better?</span> <span class="opt" data-i18n="f.opt">(optional)</span></label><textarea id="cancelForm-feedback" class="textarea" name="feedback"></textarea></div>
+      <p class="form-meta" style="margin:-4px 0 14px;text-align:left" data-i18n="cx.optnote">Answering is optional and doesn't affect your cancellation.</p>
       <button type="submit" class="btn btn-primary btn-block"><span data-i18n="cx.f.send">Cancel my membership</span></button>
       <p class="form-meta" data-i18n="f.meta">Secure. No spam. We never share your info.</p>
     </form>
@@ -243,7 +245,16 @@ window.PAGE_ES = {
  "cx.f.plan": "Membresía",
  "cx.f.p1": "Deep Freeze (residencial)",
  "cx.f.p2": "Glacier (comercial)",
- "cx.f.notes": "¿Algo que debamos saber?",
+ "cx.why": "¿Por qué te vas? (opcional)",
+ "cx.r1": "Me mudo o vendo la casa",
+ "cx.r2": "El precio",
+ "cx.r3": "No uso los beneficios",
+ "cx.r4": "Equipo nuevo o en garantía",
+ "cx.r5": "No quedé conforme con el servicio",
+ "cx.r6": "Me cambio a otra empresa",
+ "cx.r7": "Otro motivo",
+ "cx.better": "¿Qué pudimos hacer mejor?",
+ "cx.optnote": "Responder es opcional y no afecta tu cancelación.",
  "cx.f.send": "Cancelar mi membresía",
  "cx.ok.title": "Recibimos tu solicitud de cancelación",
  "cx.ok.p": "Te confirmamos por escrito en un día hábil. No habrá más cobros después de tu período de cobro actual."
