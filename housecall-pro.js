@@ -42,6 +42,13 @@ window.IAS_HCP = {
 
   `,
 
+  /* 3) WEBSITE CHAT — optional. Paste Housecall Pro's website chat bubble
+        code. Then turn on CSR AI Chat (Team → AI Team → CSR AI) so the AI
+        answers website chats too. The bubble shows on every page. */
+  chat: `
+
+  `,
+
   /* Used only while box 1 is empty. */
   fallbackCalendly: 'https://calendly.com/jobs-iasflorida/30min?hide_gdpr_banner=1&background_color=0a1929&text_color=ffffff&primary_color=fb923c'
 };
@@ -99,6 +106,19 @@ window.IAS_HCP = {
 
   var booking = leer(cfg.booking);
   var lead = leer(cfg.leadForm);
+  var chat = leer(cfg.chat);
+
+  /* ── Website chat bubble: load it once on every page ── */
+  if (!chat.vacio) {
+    if (chat.html) {
+      var cajaChat = document.createElement('div');
+      cajaChat.className = 'hcp-chat';
+      cajaChat.innerHTML = chat.html;
+      document.body.appendChild(cajaChat);
+    }
+    chat.scripts.forEach(function (s) { correrScript(s); });
+    document.documentElement.classList.add('hcp-chat-on');
+  }
 
   /* ── Lead form: swap it into the estimate-form spots ── */
   if (!lead.vacio) {
@@ -187,7 +207,8 @@ window.IAS_HCP = {
             (booking.link ? 'link found ✓' : booking.scripts.length + ' script(s), ' + (booking.tieneEmbed ? 'embed ✓' : 'no embed'))),
           'Booking pop-up (HCPWidget): ' + (modal ? 'ready ✓' : (booking.vacio ? '—' : 'not loaded yet')),
           'Lead form box: ' + (lead.vacio ? 'empty → using the site\'s own forms' : 'pasted ✓'),
-          'Lead form spots on this page: ' + document.querySelectorAll('[data-hcp-lead-slot]').length
+          'Lead form spots on this page: ' + document.querySelectorAll('[data-hcp-lead-slot]').length,
+          'Chat box: ' + (chat.vacio ? 'empty' : (chat.scripts.length ? chat.scripts.length + ' script(s) ✓' : 'pasted, but no script found'))
         ];
         var box = document.createElement('div');
         box.setAttribute('role', 'status');

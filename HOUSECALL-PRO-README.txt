@@ -15,6 +15,8 @@ WHAT WE NEED FROM HOUSECALL PRO
      Housecall Pro: Marketing > Online Booking
 2. Lead Form embed code (optional).
      Housecall Pro: Settings > Leads > Share lead form > Copy code
+3. Website chat bubble code (optional), so CSR AI Chat can answer website
+   chats. Turn on CSR AI Chat in Team > AI Team > CSR AI.
 
 
 HOW TO INSTALL (about 2 minutes)
@@ -23,6 +25,8 @@ HOW TO INSTALL (about 2 minutes)
    backticks ( ` ` ) after   booking:
 3. (Optional) Paste the Lead Form code between the backticks after
    leadForm:
+   (Optional) Paste the website chat bubble code between the backticks
+   after   chat:   It loads on every page.
 4. Save and upload / commit that one file. Nothing else needs to change.
 
 Pasted code can be a <script> tag, a <button>, an embed block (iframe/div)
