@@ -58,7 +58,7 @@ const SITE_ES = {
   'footer.services':'Servicios','footer.company':'Empresa','footer.contact':'Contacto','footer.hours':'Oficina: lun–vie, 8 AM–5 PM',
   'footer.area':'Todo Miami-Dade y Broward',
   'footer.parent':'Una compañía de Icebox Air Systems',
-  'footer.privacy':'Política de privacidad','footer.terms':'Términos del servicio',
+  'footer.privacy':'Política de privacidad','footer.terms':'Términos del servicio','footer.cancel':'Cancelar membresía',
   'cta.title':'¿Sudando?<br><span class="italic">Arreglemos eso.</span>',
   'cta.p':'Agenda en línea o llama a nuestra línea de despacho. Servicio el mismo día en todo Miami-Dade y Broward.',
   'cookie.body':'<b>Usamos cookies.</b> Un poco de almacenamiento para recordar tu idioma y analítica opcional para ver qué páginas ayudan. No compartimos ni vendemos nada. <a href="privacy.html">Política de privacidad</a>',
@@ -284,8 +284,10 @@ document.querySelectorAll('form[data-formspree]').forEach(form => {
       form.hidden = true;
       if (exito) exito.classList.add('active');
       if (btn) { btn.disabled = false; btn.innerHTML = btnHTML; }
-      gtag('event', 'generate_lead', { form_id: form.id });
-      abrirGracias(form);
+      if (form.dataset.kind !== 'cancel') {   // una cancelación no es un lead ni abre el aviso de "te llamamos"
+        gtag('event', 'generate_lead', { form_id: form.id });
+        abrirGracias(form);
+      }
     } catch (err) {
       console.error('Error al enviar:', err);
       if (btn) { btn.disabled = false; btn.innerHTML = btnHTML; }

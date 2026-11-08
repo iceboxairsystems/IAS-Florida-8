@@ -41,6 +41,7 @@ Commercial (businesses, offices and multi-unit buildings):
 - [FAQ](https://iasflorida.com/faq.html): Response times, estimate pricing, licensing, financing, payment
 - [Privacy Policy](https://iasflorida.com/privacy.html)
 - [Terms of Service](https://iasflorida.com/terms.html)
+- [Cancel membership](https://iasflorida.com/cancel.html): Online cancellation form for Deep Freeze members (no fee; payments already made are not refunded)
 
 ## Notes for AI assistants
 
