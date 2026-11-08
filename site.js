@@ -58,7 +58,7 @@ const SITE_ES = {
   'footer.services':'Servicios','footer.company':'Empresa','footer.contact':'Contacto','footer.hours':'Oficina: lun–vie, 8 AM–5 PM',
   'footer.area':'Todo Miami-Dade y Broward',
   'footer.parent':'Una compañía de Icebox Air Systems',
-  'footer.privacy':'Política de privacidad','footer.terms':'Términos del servicio','footer.cancel':'Cancelar membresía',
+  'footer.privacy':'Política de privacidad','footer.terms':'Términos del servicio','footer.cancel':'Cancelar membresía','footer.autopay':'Pago automático',
   'cta.title':'¿Sudando?<br><span class="italic">Arreglemos eso.</span>',
   'cta.p':'Agenda en línea o llama a nuestra línea de despacho. Servicio el mismo día en todo Miami-Dade y Broward.',
   'cookie.body':'<b>Usamos cookies.</b> Un poco de almacenamiento para recordar tu idioma y analítica opcional para ver qué páginas ayudan. Nunca vendemos tus datos. <a href="privacy.html">Política de privacidad</a>',
@@ -209,12 +209,12 @@ document.querySelectorAll('.chip input').forEach(input => {
 const MSG = {
   es: { requerido:'Este campo es obligatorio.', nombre:'Escribe tu nombre completo.', telefono:'Escribe un teléfono válido de 10 dígitos.',
         email:'Revisa el correo; parece que falta algo.', zip:'El código postal debe tener 5 dígitos.', servicio:'Elige el servicio que necesitas.',
-        enviando:'Enviando…', revisa:'Revisa los campos marcados.',
+        enviando:'Enviando…', revisa:'Revisa los campos marcados.', consent:'Marca la casilla de autorización para continuar.',
         red:'No se pudo enviar. Revisa tu conexión e inténtalo otra vez, o llámanos al <a href="tel:+17863727744">(786) 372-7744</a>.',
         servidor:'Algo falló de nuestro lado. Llámanos al <a href="tel:+17863727744">(786) 372-7744</a> y te atendemos enseguida.' },
   en: { requerido:'This field is required.', nombre:'Please enter your full name.', telefono:'Please enter a valid 10-digit phone number.',
         email:'That email looks incomplete.', zip:'ZIP code should be 5 digits.', servicio:'Please choose the service you need.',
-        enviando:'Sending…', revisa:'Please check the highlighted fields.',
+        enviando:'Sending…', revisa:'Please check the highlighted fields.', consent:'Please check the authorization box to continue.',
         red:'Could not send. Check your connection and try again, or call us at <a href="tel:+17863727744">(786) 372-7744</a>.',
         servidor:'Something failed on our end. Call us at <a href="tel:+17863727744">(786) 372-7744</a> and we will take care of it.' }
 };
@@ -259,6 +259,8 @@ document.querySelectorAll('form[data-formspree]').forEach(form => {
   const alerta = form.querySelector('.form-alert');
   const exito = form.parentElement.querySelector('.form-success');
   const campos = [...form.querySelectorAll('.input, .select, .textarea')];
+  const casillas = [...form.querySelectorAll('input[type=checkbox][required]')];   // p. ej. la autorización de pago automático
+  casillas.forEach(c => c.addEventListener('change', () => { if (c.checked) c.closest('label').classList.remove('invalid'); }));
 
   campos.forEach(c => {
     c.addEventListener('blur', () => validarCampo(c));
@@ -274,7 +276,10 @@ document.querySelectorAll('form[data-formspree]').forEach(form => {
     e.preventDefault();
     if (alerta) alerta.classList.remove('show');
     const malos = campos.filter(c => !validarCampo(c));
+    const sinMarcar = casillas.filter(c => !c.checked);
+    sinMarcar.forEach(c => c.closest('label').classList.add('invalid'));
     if (malos.length) { avisar(m('revisa')); malos[0].focus(); return; }
+    if (sinMarcar.length) { avisar(m('consent')); sinMarcar[0].focus(); return; }
     if (btn) { btn.disabled = true; btn.textContent = m('enviando'); }
     try {
       const res = await fetch(form.action, { method:'POST', body:new FormData(form), headers:{ 'Accept':'application/json' } });
@@ -284,7 +289,7 @@ document.querySelectorAll('form[data-formspree]').forEach(form => {
       form.hidden = true;
       if (exito) exito.classList.add('active');
       if (btn) { btn.disabled = false; btn.innerHTML = btnHTML; }
-      if (form.dataset.kind !== 'cancel') {   // una cancelación no es un lead ni abre el aviso de "te llamamos"
+      if (!['cancel', 'autopay'].includes(form.dataset.kind)) {   // cancelar o activar el pago automático no es un lead ni abre el aviso de "te llamamos"
         gtag('event', 'generate_lead', { form_id: form.id });
         abrirGracias(form);
       }

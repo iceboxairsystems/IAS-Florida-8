@@ -324,6 +324,15 @@ p{max-width:68ch}
 .pay p{font-size:14px;color:rgba(255,255,255,.55)}
 @media (max-width:1000px){.pay-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.pay-grid{grid-template-columns:1fr}}
+.autopay-strip{margin-top:20px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 30px;border-radius:20px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1)}
+.autopay-strip h3{font-size:18px;font-weight:700}
+.autopay-strip p{margin-top:6px;color:var(--muted);font-size:15px;line-height:1.55;max-width:640px}
+.autopay-strip .btn{flex:none}
+@media (max-width:700px){.autopay-strip{flex-direction:column;align-items:flex-start;padding:22px}}
+.consent{display:flex;gap:12px;align-items:flex-start;margin:2px 0 18px;padding:14px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);font-size:14px;line-height:1.55;color:rgba(255,255,255,.82);cursor:pointer}
+.consent input{flex:none;width:18px;height:18px;margin-top:2px;accent-color:var(--ice);cursor:pointer}
+.consent b{color:#fff;font-weight:700}
+.consent.invalid{border-color:rgba(248,113,113,.7);box-shadow:0 0 0 4px rgba(248,113,113,.12)}
 .terms-box{margin-top:28px;padding:28px 30px;border-radius:20px;background:rgba(125,211,252,.05);border:1px solid rgba(125,211,252,.18)}
 .terms-box h3{font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:2px;text-transform:uppercase;color:var(--ice)}
 .terms-box .checks{margin:18px 0 0;gap:11px}

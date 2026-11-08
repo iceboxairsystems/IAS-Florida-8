@@ -99,7 +99,7 @@
       <div class="mt-m"><ul class="checks">
 <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span><span data-i18n="cx.l1">No fee and no contract. Deep Freeze is month-to-month.</span></li>
 <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span><span data-i18n="cx.l2">Your cancellation takes effect at the end of your current billing period, and your benefits stay active until then.</span></li>
-<li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span><span data-i18n="cx.l3">No further charges after that. Payments already made are not refunded.</span></li>
+<li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span><span data-i18n="cx.l3">No further membership charges after that. Payments already made are not refunded.</span></li>
 <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span><span data-i18n="cx.l4">Signed up at your home in the last three business days? You owe nothing: your first charge hasn't run yet.</span></li>
 <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span><span data-i18n="cx.l5">We confirm every cancellation by email or text within one business day.</span></li>
 </ul></div>
@@ -130,6 +130,7 @@
           <option value="Glacier" data-i18n="cx.f.p2">Glacier (commercial)</option>
         </select>
       </div>
+      <div class="field"><div class="chips"><label class="chip"><input type="checkbox" name="remove_card" value="Quitar tarjeta y desactivar pago automático"><span data-i18n="cx.rmcard">Also remove my card on file (turns off autopay)</span></label></div></div>
       <fieldset class="field" style="border:0"><legend class="label" data-i18n="cx.why">Why are you leaving? (optional)</legend><div class="chips"><label class="chip"><input type="checkbox" name="reason" value="Moving or selling the home"><span data-i18n="cx.r1">Moving or selling the home</span></label><label class="chip"><input type="checkbox" name="reason" value="Price"><span data-i18n="cx.r2">Price</span></label><label class="chip"><input type="checkbox" name="reason" value="Not using the benefits"><span data-i18n="cx.r3">Not using the benefits</span></label><label class="chip"><input type="checkbox" name="reason" value="New system or under warranty"><span data-i18n="cx.r4">New system or under warranty</span></label><label class="chip"><input type="checkbox" name="reason" value="Not happy with our service"><span data-i18n="cx.r5">Not happy with our service</span></label><label class="chip"><input type="checkbox" name="reason" value="Switching to another company"><span data-i18n="cx.r6">Switching to another company</span></label><label class="chip"><input type="checkbox" name="reason" value="Other reason"><span data-i18n="cx.r7">Other reason</span></label></div></fieldset>
       <div class="field"><label for="cancelForm-feedback"><span data-i18n="cx.better">What could we have done better?</span> <span class="opt" data-i18n="f.opt">(optional)</span></label><textarea id="cancelForm-feedback" class="textarea" name="feedback"></textarea></div>
       <p class="form-meta" style="margin:-4px 0 14px;text-align:left" data-i18n="cx.optnote">Answering is optional and doesn't affect your cancellation.</p>
@@ -139,7 +140,7 @@
     <div class="form-success" role="status">
       <div class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
       <h3 data-i18n="cx.ok.title">Cancellation request received</h3>
-      <p data-i18n="cx.ok.p">We'll confirm in writing within one business day. No further charges after your current billing period.</p>
+      <p data-i18n="cx.ok.p">We'll confirm in writing within one business day. No further membership charges after your current billing period.</p>
     </div>
     </div>
   </div>
@@ -196,7 +197,7 @@
     <div class="footer-base">
       <!-- ⚠️ REEMPLAZAR: número de licencia real (CMC-XXXXXX) -->
       <span>&copy; 2026 IAS Florida LLC. <span data-i18n="footer.parent">An Icebox Air Systems company</span>. Lic. #CMC-XXXXXX</span>
-      <span><a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> &nbsp;&nbsp; <a href="terms.html" data-i18n="footer.terms">Terms of Service</a> &nbsp;&nbsp; <a href="cancel.html" data-i18n="footer.cancel">Cancel membership</a></span>
+      <span><a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> &nbsp;&nbsp; <a href="terms.html" data-i18n="footer.terms">Terms of Service</a> &nbsp;&nbsp; <a href="cancel.html" data-i18n="footer.cancel">Cancel membership</a> &nbsp;&nbsp; <a href="autopay.html" data-i18n="footer.autopay">Autopay</a></span>
     </div>
   </div>
 </footer>
@@ -235,7 +236,7 @@ window.PAGE_ES = {
  "cx.title": "Qué<br><span class=\"italic\">esperar.</span>",
  "cx.l1": "Sin penalización y sin contrato. Deep Freeze es mes a mes.",
  "cx.l2": "La cancelación entra en vigor al final de tu período de cobro actual, y tus beneficios siguen activos hasta entonces.",
- "cx.l3": "No se hacen más cobros después. Los pagos ya hechos no se reembolsan.",
+ "cx.l3": "No se hacen más cobros de membresía después. Los pagos ya hechos no se reembolsan.",
  "cx.l4": "¿Te inscribiste en tu casa en los últimos tres días hábiles? No debes nada: tu primer cobro todavía no se ha hecho.",
  "cx.l5": "Confirmamos cada cancelación por correo o mensaje de texto en un día hábil.",
  "cx.call": "¿Prefieres llamar? <a class=\"text-link\" href=\"tel:+17863727744\">(786) 372-7744</a> o escribe a <a class=\"text-link\" href=\"mailto:jobs@iasflorida.com\">jobs@iasflorida.com</a>. Las cuentas comerciales (Glacier) siguen los términos de cancelación de su acuerdo.",
@@ -257,7 +258,8 @@ window.PAGE_ES = {
  "cx.optnote": "Responder es opcional y no afecta tu cancelación.",
  "cx.f.send": "Cancelar mi membresía",
  "cx.ok.title": "Recibimos tu solicitud de cancelación",
- "cx.ok.p": "Te confirmamos por escrito en un día hábil. No habrá más cobros después de tu período de cobro actual."
+ "cx.ok.p": "Te confirmamos por escrito en un día hábil. No habrá más cobros de membresía después de tu período de cobro actual.",
+ "cx.rmcard": "Quitar también mi tarjeta registrada (desactiva el pago automático)"
 };
 </script>
 <script src="site.js" defer></script>

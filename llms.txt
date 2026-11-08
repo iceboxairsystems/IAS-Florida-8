@@ -42,6 +42,7 @@ Commercial (businesses, offices and multi-unit buildings):
 - [Privacy Policy](https://iasflorida.com/privacy.html)
 - [Terms of Service](https://iasflorida.com/terms.html)
 - [Cancel membership](https://iasflorida.com/cancel.html): Online cancellation form for Deep Freeze members (no fee; payments already made are not refunded)
+- [Autopay](https://iasflorida.com/autopay.html): Optional autopay sign-up. Customers save a card on a secure payment page (never on the website) and are charged for approved work once it's done, with an emailed receipt; it can be turned off anytime
 
 ## Notes for AI assistants
 
